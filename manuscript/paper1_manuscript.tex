@@ -1,19 +1,22 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{textcomp}
 \usepackage{lmodern}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{threeparttable}
+\usepackage{graphicx}
 \usepackage{float}
-\usepackage{setspace}
 \usepackage{xcolor}
-\usepackage{textcomp}
+\usepackage{setspace}
 \usepackage[authoryear,round]{natbib}
 \usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
 \onehalfspacing
+
+\newcommand{\gbp}{\textsterling}
 
 \title{\textbf{Four Millennia of Information Friction: Real Communication Costs, Institutional Regimes, and Speed--Cost Trade-offs, 1895\,BC--2026\,AD}}
 \author{Rolf Bastiaanssen}
@@ -23,78 +26,95 @@
 \maketitle
 
 \begin{abstract}
-How has the real economic cost of moving information across space evolved over four millennia, and when did physical transmission speed decouple from message affordability? Using a standardized labor-hour num\'eraire alongside an explicit three-tier archival taxonomy (\texttt{T1} Authenticated Primary, \texttt{T2} Corroborated Secondary, and \texttt{T3} Parameterized Calibration), this paper constructs a 4,000-year macro-spine across two primary inter-regional corridors---Antwerp--Venice and London--New York---anchored by Bronze Age, Roman, and Tang relay baselines. Separating physical transit latency by operational boundary (\textit{door-to-door}, \textit{terminal-to-terminal}, and \textit{wire-signaling-only}) reveals a sharp 1866 divergence: the transatlantic submarine telegraph collapsed latency by over three orders of magnitude ($292.8\,\text{h}$ to $0.25\,\text{h}$ terminal-to-terminal and $0.02\,\text{h}$ pure wire signaling) while raising real message costs $169\times$ (from $1.82$ to $307.69\,\text{labor-hours}$ at the November 1866 rate, and $615.38\,\text{labor-hours}$ at the July opening rate). Affordable high-speed communication emerged only after oligopolistic cable price wars (1884--1888) and twentieth-century multiplexing. Contrasting 2026 marginal wholesale backbone capacity ($0.000001\,\text{labor-hours}$) against retail broadband subscriptions resolves a persistent boundary error in long-run price indices.
+How has the real economic cost of moving information across space evolved over four millennia, and when did physical transmission speed decouple from message affordability? Using a standardized labor-hour num\'eraire and an explicit three-tier archival taxonomy, this paper constructs a 4,000-year trajectory of information frictions across two primary inter-regional corridors---Antwerp--Venice and London--New York---anchored by Bronze Age, Roman, and Tang baselines. Separating operational delivery boundaries and reporting both per-message and per-100-word real costs reveals three macro-regimes. First, an institutional democratization of distance ($1395$--$1855\,\text{AD}$), during which commercial postal networks drove real costs down by two orders of magnitude without altering physical transport speeds. Second, an acute speed--cost inversion triggered by the 1866 transatlantic submarine telegraph, which collapsed transit latency by over three orders of magnitude ($292.8\,\text{h}$ to $0.25\,\text{h}$ terminal-to-terminal and $0.02\,\text{h}$ pure wire signaling) while raising real costs $169\times$ per message ($3,381\times$ per word). Affordable high-speed communication emerged only after oligopolistic cable price wars ($1884$--$1888$) and twentieth-century multiplexing. Finally, contrasting 2026 marginal wholesale optical capacity ($1.30 \times 10^{-6}$ to $3.89 \times 10^{-9}\,\text{labor-hours}$ per message) against retail broadband subscriptions resolves a persistent boundary error in long-run price indices.
 \end{abstract}
 
 \noindent\textbf{JEL Classification:} N70, N71, N73, O33, L96.\\
-\textbf{Keywords:} Communication costs, cliometrics, telegraphy, postal history, information frictions.
+\textbf{Keywords:} Communication costs, cliometrics, telegraphy, postal history, information frictions, market integration.
 
-\section{Introduction and Archival Evidence Taxonomy}
+\section{Introduction}
 \label{sec:introduction}
 
-The cost of transmitting information across distance governs spatial market integration, imperial administration, and multinational enterprise \citep{Innis1950,Pred1973,Chandler1977,Steinwender2018}. Following \citet{Nordhaus1996} and \citet{Allen2001}, we express nominal tariffs in local unskilled or building-craftsman \textit{labor-hours per standardized message}, normalized against a matched contemporary wage series in the same currency and jurisdiction. Every benchmark is scored independently for tariff pricing (\textit{Tariff Tier}) and payload or channel throughput (\textit{Capacity Tier}):
-\begin{enumerate}
-    \item \textbf{Tier 1 (\texttt{T1} --- Authenticated Primary):} Transcribed from contemporary statutes, bilateral postal conventions, official gazettes, or primary corporate tariff schedules (e.g., 55 Geo.\ III c.\ 153; the 1848 US--UK Postal Convention, TNA \texttt{FO 93/8/20}; the 1872 ITU Rome Convention; and \textit{The Times} Anglo-American Telegraph notices).
-    \item \textbf{Tier 2 (\texttt{T2} --- Corroborated Secondary):} Established from peer-reviewed historiography with custodial shelfmarks (The Postal Museum \texttt{POST 43/112} and \texttt{POST 101/184}, BT Archives \texttt{Ref:\ TGP}, PK Porthcurno, and Archives Nationales \texttt{F/90/21276}) logged in our public audit ledger awaiting remote digitization.
-    \item \textbf{Tier 3 (\texttt{T3} --- Parameterized Calibration):} Stylized institutional baselines where open-access commercial tariffs did not exist---state-requisitioned relay quotas under Diocletian's Price Edict (\texttt{301\,AD}, Cap.\ 17.1) and the Tang \textit{Yizhan} system (\texttt{750\,AD})---or where 2026 marginal costs reflect wholesale backbone capacity rather than retail subscriptions.
-\end{enumerate}
+For nearly four thousand years, the speed of human communication was tethered to the endurance of muscles, hooves, and sails. Whether a merchant syndicate dispatched clay tablets across the Anatolian plateau in $1895\,\text{BC}$, an imperial courier rode relays down the Via Appia under Diocletian, or a Cunard steamer battled North Atlantic gales in $1855$, information moved at the pace of physical transport. Yet over those same millennia, a quiet institutional revolution transformed long-distance communication from a jealously guarded instrument of state power into an affordable commercial utility. By the mid-nineteenth century, a London craftsman could send a 400-word letter across the Atlantic for less than two hours of wages---a hundredfold drop in real cost compared to the state relay systems of antiquity.
 
-Transit times are separated across three boundaries: \texttt{door\_to\_door} (\texttt{D}), \texttt{terminal\_to\_terminal} (\texttt{T}, including queuing and messenger delivery), and \texttt{wire\_signaling\_only} (\texttt{W}, physical propagation/keying time).
+Then, on July 28, 1866, speed and affordability violently decoupled. When the permanent transatlantic submarine cable opened for business, transmission latency collapsed by more than three orders of magnitude: from twelve days by steam packet to fifteen minutes terminal-to-terminal, and barely over a minute of pure wire signaling. Paradoxically, however, the real price of sending a message exploded. At Anglo-American's opening tariff of $\gbp 20$ for twenty words (and even after its November reduction to $\gbp 10$), a single brief cablegram required between $308$ and $615\,\text{hours}$ of skilled London labor---$169$ times the cost of a steam-packet letter, and more expensive in real terms than requisitioning a carriage relay in late Roman Italy. Instantaneous global communication did not arrive as a mass-market dividend; it arrived as an acute speed--cost inversion that rationed real-time intelligence to high-value financial arbitrageurs until cutthroat cable competition in the 1880s and twentieth-century multiplexing finally reunited speed with abundance.
 
-\section{Ancient and Early Modern Baselines (1895\,BC--1635\,AD)}
-\label{sec:ancient_early_modern}
+This paper tracks the long-run evolution of information frictions across two primary inter-regional corridors---Antwerp--Venice and London--New York---anchored by ancient and medieval baselines to explain why this decoupling occurred and how market competition eventually resolved it. Following \citet{Nordhaus1996} and \citet{Allen2001}, we convert nominal tariffs into a standardized \textit{labor-hour num\'eraire} (normalized against matched contemporary unskilled or building-craftsman wages in the originating jurisdiction) and report both total message cost and standardized cost per 100 words so that shifts in message length never mask changes in the underlying unit price of information.
 
-\begin{itemize}
-    \item \textbf{Old Assyrian Caravans (\texttt{M/C-A-1}, c.\ 1895\,BC):} Along the $\approx 1,000\,\text{km}$ Assur--K\"ultepe corridor, donkey caravans carried clay tablets in $28\,\text{days}$ ($672\,\text{h}$ \texttt{D}), while urgent intelligence moved via express couriers (\textit{\d{s}iprum}, \textit{BIN} 4 124; \textit{TPAK} 1 38) funded by merchant syndicates \citep{Larsen1976,Dercksen2004,Veenhof2008}. Classified \texttt{T3/T3} and left \texttt{[Pending]} in Table~\ref{tab:master_benchmarks} pending primary tablet transcription.
-    \item \textbf{Roman \textit{Cursus Publicus} (\texttt{M/C-A-2}, 301\,AD):} Along the Via Appia between Rome and Brundisium ($\approx 360\,\text{Roman miles}$ / $530\,\text{km}$), official \textit{veredarii} covered $45\,\text{miles/day}$ ($192\,\text{h}$ \texttt{D}). Private citizens were barred without an imperial \textit{diploma} \citep[Pliny, \textit{Epist.}\ 10.45;][]{Kolb2000}. Using Diocletian's \textit{Edictum de Pretiis} Cap.\ 17.1 ($2\,\text{denarii communes/mile} \times 360\,\text{miles} = 720\,\text{d.c.}$ seat fare; full \textit{raeda} carriage $= 12\,\text{d.c./mile}$) and \citet{Allen2007}'s unskilled wage ($25\,\text{d.c.}$ per 10-hour day), the calibrated quota equals $\mathbf{288.00\,\text{labor-hours}}$ (\texttt{T3/T3}).
-    \item \textbf{Tang \textit{Yizhan} Relay (\texttt{M/C-A-3}, 750\,AD):} Across $\approx 4,500\,\text{li}$ from Chang'an to Guangzhou, state relay stations moved urgent edicts in $10\,\text{days}$ ($240\,\text{h}$ \texttt{D}) under the \textit{Da Tang Liudian} (Vol.\ 3) and \textit{Tongdian} (Ch.\ 147) \citep{Yan1969}. Closed to private commerce (\texttt{T3/T3}); Chang'an \textit{dou} rice normalization awaits primary weight reconciliation.
-    \item \textbf{Datini Merchant \textit{Scarsella} (\texttt{M/C-E-1}, 1395\,AD):} Private merchant courier pouches between Bruges/Antwerp and Venice took $16\,\text{days}$ ($384\,\text{h}$ \texttt{D}) at $0.50\,\text{gold florins}$ ($\approx 38\,\text{soldi}$) per $400$-word letter (\textit{ASPo, Datini, buste 600--605}; \citealt{Melis1962,Frangioni1994}). Against \citet{Malanima2007}'s building craftsman wage ($20\,\text{soldi}$ per 10-hour day), real cost stood at $\mathbf{19.00\,\text{labor-hours}}$ (\texttt{T1/T2}).
-    \item \textbf{Thurn und Taxis Imperial Post (\texttt{M/C-E-2}, c.\ 1635\,AD):} Public relay posts along the Antwerp--Augsburg--Venice corridor cut transit to $12\,\text{days}$ ($288\,\text{h}$ \texttt{D}) at $18\,\text{kreuzer}$ ($\approx 4\,\text{Brabant groten}$) per sheet \citep{Rubsam1889,Dallmeier1977,Behringer1990}. Against an Antwerp master craftsman wage of $46\,\text{Brabant groten}$ per 10-hour day \citep{VanderWee1963,Allen2001}, real cost fell to $\mathbf{0.87\,\text{labor-hours}}$ (\texttt{T2/T3}), later anchored by the 1850 \textit{D\"OTV} treaty (\texttt{RGBl.\ Nr.\ 361/1850}, \texttt{T1}) and 1867 Brenner Railway (\texttt{T1}).
-\end{itemize}
+To ensure commensurability across four millennia of monetary regimes and archival sources, every observation is governed by two disciplines detailed in Table~\ref{tab:master_benchmarks} and Appendix~\ref{app:archival_ledger}. First, we separate operational transit boundaries into door-to-door delivery, terminal-to-terminal exchange transit, and pure wire signaling, while providing consistent door-to-door latency bounds across all eras. Second, we classify every benchmark independently for tariff pricing and payload standardization across a three-tier evidence hierarchy (\texttt{T1} authenticated primary statutes and gazettes, \texttt{T2} corroborated secondary historiography, and \texttt{T3} parameterized institutional or engineering calibrations), strictly avoiding synthetic interpolation where primary wage or tablet calibrations remain open.
 
-\section{The Transatlantic Communications Revolution (1815--1956)}
-\label{sec:transatlantic}
+The resulting synthesis unfolds in three acts. Act~I (Section~\ref{sec:act1}) examines the pre-telegraphic era ($1895\,\text{BC}$--$1855\,\text{AD}$), showing how institutional commercialization drove radical price deflation long before electricity existed. Act~II (Section~\ref{sec:act2}) centers on the 1866 submarine cable shock and the subsequent oligopolistic bottleneck ($1866$--$1956$), embedding a theoretical quote-age arbitrage model directly into the narrative to explain why merchants paid an empirical ransom for speed. Act~III (Section~\ref{sec:act3}) traces the twentieth-century march toward multiplexed abundance ($1956$--$2026$), resolving a persistent wholesale-versus-retail boundary illusion in modern communication price indices.
 
-We pair our macro-spine benchmarks (\texttt{M/C-T-1} through \texttt{M/C-T-4}) with 17 transatlantic market-structure milestones between 1815 and 1956 (Table~\ref{tab:atlantic_milestones}), 13 of which are verified at \texttt{T1}. Under the British Ship Letter Act of 11 July 1815 (\texttt{55 Geo.\ III c.\ 153}, ss.\ 2 \& 16; \texttt{ATL-1815-SAIL}, \texttt{T1}), private ship letters carried a statutory sea fee of $6\,\text{d.}$--$8\,\text{d.}$ ($\pounds 0.0333$, half packet postage), whereas Falmouth--New York packet dispatches cost $1\,\text{s.}\,1\,\text{d.}$--$1\,\text{s.}\,3\,\text{d.}$ ($\pounds 0.0625$) per single sheet (the higher $3\,\text{s.}\,6\,\text{d.}$ schedule applied to East Indies and Cape routes; \citealt{Joyce1893}). By 1825 (\texttt{M/C-T-1}, \texttt{T2/T3}), Black Ball Line sailing packets crossed in $27\,\text{days}$ ($648\,\text{h}$ mean; $504\,\text{h}$ record) at $1\,\text{s.}\,6\,\text{d.}$ ($18\,\text{d.}$), or $\mathbf{3.33\,\text{labor-hours}}$ at \citet{Bowley1900}'s London carpenter wage ($54\,\text{d.}$ per 10-hour day).
+\section{Act I: The Institutional Democratization of Distance (1895\,BC--1855\,AD)}
+\label{sec:act1}
 
-Subsidized Cunard steam packets (July 1840) cut mean crossing times to $344\,\text{h}$. The Treasury Warrant of 6 July 1840 (\texttt{ATL-1840-STEAM}, \texttt{T1}; \citealt{Arnell1980}) set a $1\,\text{shilling}$ ($\pounds 0.05$) British packet rate per half-ounce, while U.S.\ inward ship postage ($7$--$10\text{\textcent}$) remained separate until the bilateral US--UK Postal Convention of 15 December 1848 (\texttt{TNA FO 93/8/20}; \texttt{BPP 1849 [1012]}, effective February 1849; \texttt{ATL-1849-STEAM}, \texttt{T1}) unified sea and inland postage at $1\,\text{shilling}$ ($24\text{\textcent}$) per half-ounce. By 1855 (\texttt{M/C-T-2}, \texttt{T1/T3}), fleet mean crossings reached $292.8\,\text{h}$ ($12.2\,\text{days}$; record $228\,\text{h}$). At a London craftsman wage of $66\,\text{d.}$/day \citep{Bowley1900}, the $12\,\text{d.}$ tariff required $\mathbf{1.82\,\text{labor-hours}}$ across both our $400$-word commercial baseline and our conservative $250$-word single-sheet statutory sensitivity (\texttt{M/C-T-2-SENS}, \texttt{T1/T1}).
+In the ancient and early medieval worlds, rapid long-distance communication was a monopoly of the state, sustained by non-commercial requisition systems rather than open public tariffs \citep{Innis1950}. Along the thousand-kilometer overland corridor linking Assur to the Anatolian trading colony of K\"ultepe around $1895\,\text{BC}$, Old Assyrian merchant syndicates relied on donkey caravans that required roughly twenty-eight days ($672\,\text{hours}$ door-to-door) to transport clay correspondence, dispatching dedicated express couriers only for urgent financial or political intelligence funded through collective syndicate assessments \citep{Larsen1976,Dercksen2004,Veenhof2008}.
 
-The permanent Atlantic submarine cable (28 July 1866; \texttt{ATL-1866-JUL}, \texttt{T1}) collapsed \texttt{terminal\_to\_terminal} latency to $0.25\,\text{h}$ ($15\,\text{min}$; \texttt{M/C-T-3}) and \texttt{wire\_signaling\_only} propagation time to $0.02\,\text{h}$ ($1.2\,\text{min}$ at $17\,\text{wpm}$; \citealt{Bright1866}; \texttt{M/C-T-3-SENS}). Yet at Anglo-American's July 1866 opening tariff of $\pounds 20$ ($4,800\,\text{d.}$) for 20 words, real cost surged to $\mathbf{615.38\,\text{labor-hours}}$ (London craftsman wage $78\,\text{d.}$/day, \citealt{Bowley1900})---falling to $\mathbf{307.69\,\text{labor-hours}}$ when halved to $\pounds 10$ on 1 November 1866 (\textit{The Times}, 2 November 1866, p.\ 7), still $169\times$ the 1855 steam-packet cost.
+Fifteen centuries later, classical antiquity and medieval East Asia achieved impressive physical relay speeds while keeping those networks legally closed to private commerce. Along the Via Appia between Rome and Brundisium ($\approx 360\,\text{Roman miles}$), official couriers of the Roman \textit{cursus publicus} covered roughly forty-five miles per day, completing the journey in eight days ($192\,\text{hours}$). Yet private citizens were prohibited from using the imperial post without an official \textit{diploma} \citep[Pliny, \textit{Epist.}\ 10.45;][]{Kolb2000} and relied instead on private slave couriers. Because the \textit{cursus publicus} operated via compulsory municipal liturgies (\textit{munera}) without commercial ticket prices and bundled multiple dispatches per rider, we use Chapter~17.1 (\textit{De mercedibus vectorum}) of Diocletian's Price Edict ($301\,\text{AD}$)---which capped commercial passenger fares at $2\,\text{denarii communes}$ per Roman mile ($720\,\text{d.c.}$ over $360\,\text{miles}$, or $12\,\text{d.c./mile}$ for a full post-carriage)---as a shadow commercial transport proxy for state relay capacity. Normalized against \citet{Allen2007}'s Roman unskilled wage of $25\,\text{denarii communes}$ per ten-hour day, this shadow proxy implies a real cost of $\mathbf{288.00\,\text{labor-hours}}$ per 100-word dispatch. A similar state-requisitioned exclusivity characterized the Tang Dynasty's \textit{Yizhan} relay network in $750\,\text{AD}$, which moved imperial edicts across $4,500\,\text{li}$ from Chang'an to Guangzhou in ten days ($240\,\text{hours}$) under strict statutory rationing closed to private merchants \citep{Yan1969}.
 
-Rates declined through discrete competitive shocks (Table~\ref{tab:atlantic_milestones}): five guineas ($\pounds 5.25$ / 10 words) on 1 December 1867 (\texttt{ATL-1867-DEC}, \texttt{T1}; US Serial Set \texttt{01442}; \citealt{Webb1888}); $\pounds 3.375$ on 1 September 1868 (\texttt{ATL-1868-SEP}, \texttt{T1}; \citealt{Bright1898}); $30\,\text{s.}$ ($\pounds 1.50$) upon French cable entry in June 1869 (\texttt{ATL-1869-JUN}, \texttt{T2}); per-word tariffs of $4\,\text{s.}$ (1872) and $3\,\text{s.}$ (1875); and the entry of Mackay--Bennett's independent \textbf{Commercial Cable Company} on \textbf{24 December 1884} at $\mathbf{40\text{\textcent}}$ ($1\,\text{s.}\,8\,\text{d.} = \pounds 0.0833$) per word (\texttt{ATL-1884-DEC}, \texttt{T1}; \citealt{USCensus1960}, Series R-46), matched by incumbent pool lines. On 6 May 1886, the pool slashed rates to $\mathbf{12\text{\textcent}}$ ($6\,\text{d.} = \pounds 0.0250$) while Commercial Cable held $\mathbf{25\text{\textcent}}$ ($1\,\text{s.} = \pounds 0.0500$; \texttt{ATL-1886-MAY}, \texttt{T1}, \texttt{is\_dual\_rate = true}), until the 30 July 1888 four-company cartel pact stabilized rates at $1\,\text{s.}$ ($25\text{\textcent}$; \texttt{ATL-1888-SEP}, \texttt{T1}). Later \texttt{TAT-1} coaxial telephony (25 September 1956; \texttt{POST 101/184}; \texttt{M/C-T-4}, \texttt{T1/T3}) reduced a 3-minute call to $\pounds 3$ ($720\,\text{d.}$), or $\mathbf{12.20\,\text{labor-hours}}$ against UK male manual earnings of $59\,\text{d.}$/hour (\textit{Ministry of Labour Gazette}, October 1956).
+The democratization of distance began not with mechanical speed, but with institutional innovation in late medieval Europe. By $1395$, private Italian merchant-banking houses---exemplified by the Datini enterprise of Prato---operated scheduled overland courier pouches (\textit{scarselle}) linking Bruges and Antwerp to Venice \citep{Melis1962,Frangioni1994}. A 400-word commercial letter spent sixteen days ($384\,\text{hours}$) in transit at a composite fee of half a gold florin ($\approx 38\,\text{soldi}$). Against \citet{Malanima2007}'s Northern Italian building craftsman wage of $20\,\text{soldi}$ per ten-hour day, real communication cost stood at $\mathbf{19.00\,\text{labor-hours}}$ per message ($\mathbf{4.75\,\text{labor-hours per 100 words}}$)---more than an order of magnitude cheaper than the late Roman proxy.
+
+By the seventeenth century, pan-European postal concessions transformed this mercantile network into an open public utility. Operating scheduled relay posts along the Antwerp--Augsburg--Venice corridor, the Imperial Post of the Thurn und Taxis dynasty cut door-to-door transit to twelve days ($288\,\text{hours}$) by $1635$ while charging $18\,\text{kreuzer}$ ($\approx 4\,\text{Brabant groten}$) for a single sheet \citep{Rubsam1889,Dallmeier1977,Behringer1990}. Normalized against an Antwerp master building craftsman wage of $46\,\text{Brabant groten}$ per ten-hour day \citep{VanderWee1963,Allen2001}, real cost fell to just $\mathbf{0.87\,\text{labor-hours}}$ per message ($\mathbf{0.22\,\text{labor-hours per 100 words}}$). Later transalpine standardization under the 1850 Austro-German Telegraph Union treaty and the 1867 Brenner Railway consolidated this continental artery.
+
+Institutional scaling reached its pre-telegraphic zenith on the North Atlantic \citep{North1958,Harley1988,Bogart2005}. Under the British Ship Letter Act of July 1815, private merchant ship letters carried a statutory sea fee of $6\,\text{d.}$ to $8\,\text{d.}$ ($\gbp 0.0333$), whereas official Falmouth--New York packet dispatches cost $1\,\text{s.}\,1\,\text{d.}$ to $1\,\text{s.}\,3\,\text{d.}$ ($\gbp 0.0625$) per single sheet (with the Act's higher $3\,\text{s.}\,6\,\text{d.}$ tariff applying to East Indies and Cape routes; \citealt{Joyce1893}). By $1825$, Black Ball Line scheduled sailing packets crossed from New York to Liverpool in an average of twenty-seven days ($648\,\text{hours}$ mean; $504\,\text{hours}$ record) at a combined single-sheet charge of $1\,\text{s.}\,6\,\text{d.}$ ($18\,\text{d.}$), requiring $\mathbf{3.33\,\text{labor-hours}}$ ($\mathbf{0.83\,\text{LH/100w}}$) at \citet{Bowley1900}'s London carpenter wage of $54\,\text{d.}$ per day.
+
+Subsidized Cunard steam packets, inaugurated in July 1840, cut mean transatlantic crossing times nearly in half to $344\,\text{hours}$. While the British Treasury Warrant of July 1840 established a uniform $1\,\text{shilling}$ ($\gbp 0.05$) British packet tariff per half-ounce \citep{Arnell1980}, U.S.\ inward ship postage ($7$ to $10\text{\textcent}$) remained payable separately until the bilateral US--UK Postal Convention of December 1848 (effective February 1849) unified sea and inland postage at exactly $1\,\text{shilling}$ ($24\text{\textcent}$) per half-ounce \citep{BPP1849}. By $1855$, fleet mean steam crossings reached $292.8\,\text{hours}$ ($12.2\,\text{days}$, with record passages of $228\,\text{hours}$; \citealt{BPP1855}). Against a London craftsman wage of $66\,\text{d.}$ per day \citep{Bowley1900}, the $12\,\text{d.}$ unified rate required only $\mathbf{1.82\,\text{labor-hours}}$---or $\mathbf{0.46\,\text{LH/100w}}$ for a dense 400-word commercial sheet and $\mathbf{0.73\,\text{LH/100w}}$ under a conservative 250-word single-sheet weight bound. Over fifteen centuries, commercial postal institutions had reduced the real cost of moving information by more than $99$ percent without breaking the speed limit of wind, horse, and steam.
+
+\section{Act II: The 1866 Speed--Cost Inversion and Arbitrage (1866--1956)}
+\label{sec:act2}
+
+The completion of the permanent transatlantic submarine cable on July 28, 1866, shattered the historical parity between speed and affordability. Pure electrical signaling allowed impulses to cross the ocean at $17\,\text{words per minute}$, or just $0.02\,\text{hours}$ ($1.2\,\text{minutes}$) for a twenty-word dispatch \citep{Bright1866}. Even accounting for terminal queuing and local messenger delivery in London and New York ($0.25\,\text{hours}$ terminal-to-terminal, and an estimated $1.25$ to $3.25\,\text{hours}$ door-to-door), effective latency fell by two to three orders of magnitude overnight.
+
+Adjusting for payload capacity, however, reveals the staggering magnitude of the accompanying price shock. Whereas the 1855 steam packet carried 400 words for $1.82\,\text{labor-hours}$, the Anglo-American Telegraph Company's July 1866 opening tariff of $\gbp 20$ ($4,800\,\text{d.}$) purchased just twenty words. To a London craftsman earning $78\,\text{d.}$ per day \citep{Bowley1900}, those twenty words represented $\mathbf{615.38\,\text{labor-hours}}$. Even after the company halved its minimum tariff to $\gbp 10$ ($2,400\,\text{d.}$) on November 1, 1866 (\textit{The Times}, November 2, 1866, p.\ 7), a twenty-word cablegram still cost $\mathbf{307.69\,\text{labor-hours}}$---$169$ times the per-message cost of a steam-packet letter. Standardized per 100 words (Table~\ref{tab:master_benchmarks}), the unit price of information surged from $0.46$ to $\mathbf{1,538.45\,\text{labor-hours}}$ at the November tariff ($\mathbf{3,076.90\,\text{LH/100w}}$ in July)---a $\mathbf{3,381\times}$ overnight jump ($2,113\times$ against the 250-word postal sensitivity). Merchants responded endogenously by adopting proprietary commercial codebooks (such as Bentley's and ABC codes) that compressed multi-word commodity orders into single dictionary codewords, partially blunting per-word tariffs without eliminating the capital barrier to entry.
+
+Why would any market participant pay an empirical ransom exceeding 300 labor-hours to transmit a few sentences? The answer lies in the economic value of reducing information lag---or ``quote age''---in volatile commodity and financial markets \citep{Pred1973,Chandler1977}. Consider a risk-averse transatlantic arbitrageur choosing between a slow steam-packet dispatch of cost $C_{\text{packet}}$ and lag $L_{\text{packet}}$ (in hours) and a rapid telegraphic dispatch of cost $C_{\text{telegraph}}$ and lag $L_{\text{telegraph}}$. The break-even threshold $H^*$---defined as the minimum marginal economic value of reducing quote age by one hour required to justify paying the telegraphic premium---is given by:
+\begin{equation}
+H^* = \frac{\Delta C}{\Delta L} = \frac{C_{\text{telegraph}} - C_{\text{packet}}}{L_{\text{packet}} - L_{\text{telegraph}}}.
+\label{eq:breakeven_h}
+\end{equation}
+Evaluating Equation~\eqref{eq:breakeven_h} at the July 1866 opening tariff ($615.38\,\text{LH}$) against the contemporary 1866 pre-cable steamship mean crossing of $10.18\,\text{days}$ ($244.20\,\text{hours}$; \citealt{Steinwender2018}) yields a baseline break-even threshold of $\mathbf{H^*_0 = 2.515\,\text{labor-hours per hour of quote age}}$ (while evaluating against the November $\gbp 10$ tariff and 1855 steamer lag yields $1.046\,\text{LH/h}$ per message, or $5.257\,\text{LH/h}$ per 100 words; Appendix~\ref{app:quote_age}).
+
+For high-volume cotton and securities houses, paying above $H^*$ was eminently rational. As \citet{Steinwender2018} demonstrates, the arrival of the 1866 cable triggered a $93\%$ collapse in transatlantic cotton price-difference variance (a $73.5\%$ drop in standard deviation) and a $35\%$ reduction in mean price spreads. Eliminating ten days of transit basis risk generated arbitrage surpluses far exceeding $2.515\,\text{labor-hours}$ per hour saved, whereas ordinary mercantile correspondence remained priced out of the wire. The 1866 submarine telegraph was therefore not a substitute for the post; it was a specialized financial instrument that rationed real-time intelligence to large-scale arbitrageurs.
+
+This oligopolistic bottleneck was broken only by two decades of competitive cable entry and price wars (Table~\ref{tab:atlantic_milestones}). Incumbent rate cuts to five guineas ($\gbp 5.25$ for ten words) in December 1867 \citep{Webb1888} and $\gbp 3\,7\,\text{s.}\,6\,\text{d.}$ in September 1868 \citep{Bright1898} anticipated the French Atlantic Cable's entry at $30\,\text{s.}$ in June 1869, followed by per-word pricing at $4\,\text{s.}$ in 1872 and $3\,\text{s.}$ in 1875. The decisive rupture arrived on December 24, 1884, when Mackay and Bennett's independent Commercial Cable Company entered service at $40\text{\textcent}$ ($1\,\text{s.}\,8\,\text{d.} = \gbp 0.0833$) per word, forcing incumbent pool lines to match \citep{USCensus1960}. On May 6, 1886, the incumbent pool slashed rates to $12\text{\textcent}$ ($6\,\text{d.} = \gbp 0.0250$) per word while Commercial Cable held a dual-rate $25\text{\textcent}$ ($1\,\text{s.}$) tariff, sparking a two-year price war ended only by the four-company cartel pact of July 30, 1888 at $1\,\text{s.}$ ($25\text{\textcent}$) per word ($30.77\,\text{LH}$ for twenty words, or $15.38\,\text{LH}$ for ten words).
+
+Within continental Europe, the \citet{ITU1872} Rome Convention standardized the Belgium--Italy twenty-word telegram at $6.50\,\text{gold francs}$ ($2.5\,\text{hours}$ terminal-to-terminal), showing an attenuated intra-European speed--cost inversion relative to early modern gold postal tariffs before interwar telephony ($24.00\,\text{BEF}$ for a three-minute Brussels--Rome call in 1935) restored affordability. Across the Atlantic, commercial radio-telephony opened in January 1927 at $\gbp 15$ for three minutes, before the \texttt{TAT-1} coaxial telephone cable (September 25, 1956) cut the three-minute London--New York call ($450\,\text{spoken words}$) to $\gbp 3$ ($720\,\text{d.}$), or $\mathbf{12.20\,\text{labor-hours}}$ ($\mathbf{2.71\,\text{LH/100w}}$) against UK male manual earnings of $59\,\text{d.}$/hour \citep{MinLabour1956}---finally uniting real-time voice communication with mass commercial affordability.
 
 \begin{table}[H]
 \centering
 \scriptsize
+\setlength{\tabcolsep}{3.5pt}
 \begin{threeparttable}
-\caption{Master Macro-Spine and Sensitivity Benchmarks, 1895\,BC--2026\,AD (\texttt{master\_benchmarks.csv})}
+\caption{Master Macro-Spine and Sensitivity Benchmarks, 1895\,BC--2026\,AD}
 \label{tab:master_benchmarks}
-\begin{tabularx}{\textwidth}{@{}llclllrrl@{}}
+\begin{tabularx}{\textwidth}{@{}llclllrrrl@{}}
 \toprule
-\textbf{ID} & \textbf{Corridor} & \textbf{Year} & \textbf{Tiers}\tnote{a} & \textbf{Spec.} & \textbf{Nominal Tariff} & \textbf{Words} & \textbf{Transit (h)}\tnote{b} & \textbf{Labor-Hrs} \\
+\textbf{ID} & \textbf{Corridor} & \textbf{Year} & \textbf{Tiers}\tnote{a} & \textbf{Spec.} & \textbf{Nominal Tariff} & \textbf{Words} & \textbf{Transit (h)}\tnote{b} & \textbf{LH/Msg} & \textbf{LH/100w} \\
 \midrule
-\texttt{M/C-A-1} & Assur--K\"ultepe & $-1895$ & \texttt{T3/T3} & Base & \texttt{[Pending]} (Ag shekels) & $100$ & $672.00$ (\texttt{D}) & \texttt{[Pending]} \\
-\texttt{M/C-A-2} & Rome--Brundisium & $301$ & \texttt{T3/T3} & Base & $720$ d.c.\ (Cap.\ 17.1) & $100$ & $192.00$ (\texttt{D}) & $\mathbf{288.00}$ \\
-\texttt{M/C-A-3} & Chang'an--Guangzhou & $750$ & \texttt{T3/T3} & Base & \texttt{[Pending]} (cash/grain) & $100$ & $240.00$ (\texttt{D}) & \texttt{[Pending]} \\
-\texttt{M/C-E-1} & Antwerp--Venice & $1395$ & \texttt{T1/T2} & Base & $0.50$ fl.\ ($\approx 38$ soldi) & $400$ & $384.00$ (\texttt{D}) & $\mathbf{19.00}$ \\
-\texttt{M/C-E-2} & Antwerp--Venice & $1635$ & \texttt{T2/T3} & Base & $18$ kr.\ ($\approx 4$ Br.\ gr.) & $400$ & $288.00$ (\texttt{D}) & $\mathbf{0.87}$ \\
-\texttt{M/C-T-1} & London--New York & $1825$ & \texttt{T2/T3} & Base & $18\,\text{d.}$ ($1.5\,\text{s.}$) & $400$ & $648.00$ (\texttt{D}) & $\mathbf{3.33}$ \\
-\texttt{M/C-T-2} & London--New York & $1855$ & \texttt{T1/T3} & Base & $12\,\text{d.}$ ($1\,\text{s.}$ / $0.5\,\text{oz}$) & $400$ & $292.80$ (\texttt{D}) & $\mathbf{1.82}$ \\
-\texttt{M/C-T-2-SENS} & London--New York & $1855$ & \texttt{T1/T1} & Sens. & $12\,\text{d.}$ ($1\,\text{s.}$ / $0.5\,\text{oz}$) & $250$ & $292.80$ (\texttt{D}) & $\mathbf{1.82}$ \\
-\texttt{M/C-T-3} & London--New York & $1866$ & \texttt{T1/T2} & Base & $2,400\,\text{d.}$ ($\pounds 10$, Nov) & $20$ & $0.25$ (\texttt{T}) & $\mathbf{307.69}$ \\
-\texttt{M/C-T-3-SENS} & London--New York & $1866$ & \texttt{T1/T1} & Sens. & $4,800\,\text{d.}$ ($\pounds 20$, Jul) & $20$ & $0.02$ (\texttt{W}) & $\mathbf{615.38}$ \\
-\texttt{M/C-E-3} & Antwerp--Venice & $1872$ & \texttt{T1/T3} & Base & $6.50$ gold francs & $20$ & $2.50$ (\texttt{T}) & \texttt{[Pending]} \\
-\texttt{M/C-E-4} & Antwerp--Venice & $1935$ & \texttt{T1/T3} & Base & $24.00$ BEF (3-min call) & $450$ & $0.25$ (\texttt{T}) & \texttt{[Pending]} \\
-\texttt{M/C-E-4-SENS} & Antwerp--Venice & $1935$ & \texttt{T1/T1} & Sens. & \texttt{[Pending]} BEF (20w tel.) & $20$ & $0.50$ (\texttt{T}) & \texttt{[Pending]} \\
-\texttt{M/C-T-4} & London--New York & $1956$ & \texttt{T1/T3} & Base & $720\,\text{d.}$ ($\pounds 3$, 3-min call) & $450$ & $0.10$ (\texttt{T}) & $\mathbf{12.20}$ \\
-\texttt{M/C-T-4-SENS} & London--New York & $1956$ & \texttt{T1/T1} & Sens. & \texttt{[Pending]} (66 wpm Telex) & $66$ & $0.02$ (\texttt{W}) & \texttt{[Pending]} \\
-\texttt{M/C-E-5} & Antwerp--Venice & $2026$ & \texttt{T3/T3} & Base & $€2.00$/Mbps/mo (DWDM) & $10^6$ & $0.0001$ (\texttt{W}) & $\mathbf{0.000001}$ \\
-\texttt{M/C-T-5} & London--New York & $2026$ & \texttt{T3/T3} & Base & $\$7.80$/Gbps/mo (Subsea) & $10^6$ & $0.0001$ (\texttt{W}) & $\mathbf{0.000001}$ \\
+\texttt{M/C-A-1} & Assur--K\"ultepe & $-1895$ & \texttt{T3/T3} & Base & \texttt{[Pending]} (Ag) & $100$ & $672.0$ (\texttt{D}) & \texttt{[Pending]} & \texttt{[Pending]} \\
+\texttt{M/C-A-2} & Rome--Brundisium & $301$ & \texttt{T3/T3} & Base & $720$ d.c.\ (Cap.\ 17.1) & $100$ & $192.0$ (\texttt{D}) & $\mathbf{288.00}$ & $\mathbf{288.00}$ \\
+\texttt{M/C-A-3} & Chang'an--Guangzhou & $750$ & \texttt{T3/T3} & Base & \texttt{[Pending]} (cash) & $100$ & $240.0$ (\texttt{D}) & \texttt{[Pending]} & \texttt{[Pending]} \\
+\texttt{M/C-E-1} & Antwerp--Venice & $1395$ & \texttt{T1/T2} & Base & $0.50$ fl.\ ($38$ soldi) & $400$ & $384.0$ (\texttt{D}) & $\mathbf{19.00}$ & $\mathbf{4.75}$ \\
+\texttt{M/C-E-2} & Antwerp--Venice & $1635$ & \texttt{T2/T3} & Base & $18$ kr.\ ($4$ Br.\ gr.) & $400$ & $288.0$ (\texttt{D}) & $\mathbf{0.87}$ & $\mathbf{0.22}$ \\
+\texttt{M/C-T-1} & London--New York & $1825$ & \texttt{T2/T3} & Base & $18\,\text{d.}$ ($1\,\text{s.}\,6\,\text{d.}$) & $400$ & $648.0$ (\texttt{D}) & $\mathbf{3.33}$ & $\mathbf{0.83}$ \\
+\texttt{M/C-T-2} & London--New York & $1855$ & \texttt{T1/T3} & Base & $12\,\text{d.}$ ($1\,\text{s.}$/$0.5\,\text{oz}$) & $400$ & $292.8$ (\texttt{D}) & $\mathbf{1.82}$ & $\mathbf{0.46}$ \\
+\texttt{M/C-T-2-SENS} & London--New York & $1855$ & \texttt{T1/T1} & Sens. & $12\,\text{d.}$ ($1\,\text{s.}$/$0.5\,\text{oz}$) & $250$ & $292.8$ (\texttt{D}) & $\mathbf{1.82}$ & $\mathbf{0.73}$ \\
+\texttt{M/C-T-3} & London--New York & $1866$ & \texttt{T1/T2} & Base & $2,400\,\text{d.}$ ($\gbp 10$, Nov) & $20$ & $0.25$ (\texttt{T})\tnote{c} & $\mathbf{307.69}$ & $\mathbf{1,538.45}$ \\
+\texttt{M/C-T-3-SENS} & London--New York & $1866$ & \texttt{T1/T1} & Sens. & $4,800\,\text{d.}$ ($\gbp 20$, Jul) & $20$ & $0.02$ (\texttt{W})\tnote{c} & $\mathbf{615.38}$ & $\mathbf{3,076.90}$ \\
+\texttt{M/C-E-3} & Antwerp--Venice & $1872$ & \texttt{T1/T3} & Base & $6.50$ gold francs & $20$ & $2.50$ (\texttt{T}) & \texttt{[Pending]} & \texttt{[Pending]} \\
+\texttt{M/C-E-4} & Antwerp--Venice & $1935$ & \texttt{T1/T3} & Base & $24.00$ BEF (3m call) & $450$ & $0.25$ (\texttt{T}) & \texttt{[Pending]} & \texttt{[Pending]} \\
+\texttt{M/C-E-4-SENS} & Antwerp--Venice & $1935$ & \texttt{T1/T1} & Sens. & \texttt{[Pending]} (20w tel.) & $20$ & $0.50$ (\texttt{T}) & \texttt{[Pending]} & \texttt{[Pending]} \\
+\texttt{M/C-T-4} & London--New York & $1956$ & \texttt{T1/T3} & Base & $720\,\text{d.}$ ($\gbp 3$, 3m call) & $450$ & $0.10$ (\texttt{T}) & $\mathbf{12.20}$ & $\mathbf{2.71}$ \\
+\texttt{M/C-T-4-SENS} & London--New York & $1956$ & \texttt{T1/T1} & Sens. & \texttt{[Pending]} (Telex) & $66$ & $0.02$ (\texttt{W}) & \texttt{[Pending]} & \texttt{[Pending]} \\
+\texttt{M/C-E-5} & Antwerp--Venice & $2026$ & \texttt{T3/T3} & Base & $€2.00$/Mbps/mo & $10^{6}$ & $10^{-4}$ (\texttt{W}) & $\mathbf{1.30{\times}10^{-6}}$ & $\mathbf{1.30{\times}10^{-10}}$ \\
+\texttt{M/C-T-5} & London--New York & $2026$ & \texttt{T3/T3} & Base & $\$7.80$/Gbps/mo & $10^{6}$ & $10^{-4}$ (\texttt{W}) & $\mathbf{3.89{\times}10^{-9}}$ & $\mathbf{3.89{\times}10^{-13}}$ \\
 \bottomrule
 \end{tabularx}
 \begin{tablenotes}
 \footnotesize
-\item[a] \textit{Tiers}: \texttt{Tariff Tier / Capacity Tier}. \item[b] (\texttt{D}) \texttt{door\_to\_door}; (\texttt{T}) \texttt{terminal\_to\_terminal}; (\texttt{W}) \texttt{wire\_signaling\_only}.
+\item[a] \textit{Tiers}: \texttt{Tariff Tier / Capacity Tier}. \texttt{LH/Msg} = labor-hours per message; \texttt{LH/100w} = normalized labor-hours per 100 words.
+\item[b] Operational boundaries: (\texttt{D}) door-to-door; (\texttt{T}) terminal-to-terminal; (\texttt{W}) wire-signaling-only.
+\item[c] Estimated door-to-door (\texttt{D}) bound in 1866 is $2.25\,\text{h}$ (range $1.25$--$3.25\,\text{h}$ including local messenger collection and delivery).
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -103,17 +123,17 @@ Rates declined through discrete competitive shocks (Table~\ref{tab:atlantic_mile
 \centering
 \scriptsize
 \begin{threeparttable}
-\caption{Transatlantic Market-Structure Milestones, 1815--1956 (\texttt{atlantic\_milestones.csv})}
+\caption{Transatlantic Market-Structure Milestones, 1815--1956}
 \label{tab:atlantic_milestones}
-\begin{tabularx}{\textwidth}{@{}llllrrl@{}}
+\begin{tabularx}{\textwidth}{@{}llllrrX@{}}
 \toprule
-\textbf{Milestone ID} & \textbf{Date} & \textbf{Mode} & \textbf{Tier} & \textbf{Rate ($\pounds$)} & \textbf{Mean (h)} & \textbf{Primary / Archival Anchor} \\
+\textbf{Milestone ID} & \textbf{Date} & \textbf{Mode} & \textbf{Tier} & \textbf{Rate ($\gbp$)} & \textbf{Mean (h)} & \textbf{Primary / Archival Anchor} \\
 \midrule
 \texttt{ATL-1815-SAIL} & 1815-07-11 & Sailing Ship Letter & \texttt{T1} & $0.0333$\tnote{a} & $840.0$ & \texttt{55 Geo.\ III c.\ 153} (ss.\ 2 \& 16) \\
 \texttt{ATL-1825-SAIL} & 1825-01-01 & Sailing Packet & \texttt{T2} & $0.0750$ & $648.0$ & Postal Museum \texttt{POST 43/112} \\
 \texttt{ATL-1840-STEAM} & 1840-07-06 & Steam Packet (UK only) & \texttt{T1} & $0.0500$ & $344.0$ & Treasury Warrant (6 Jul 1840) \\
 \texttt{ATL-1849-STEAM} & 1849-02-15 & Steam Packet (Unified) & \texttt{T1} & $0.0500$ & $312.0$ & US--UK Convention (\texttt{TNA FO 93/8/20}) \\
-\texttt{ATL-1855-STEAM} & 1855-06-01 & Steam Packet & \texttt{T1} & $0.0500$ & $292.8$ & \texttt{BPP} Mail Packet Returns (1855) \\
+\texttt{ATL-1855-STEAM} & 1855-06-01 & Steam Packet & \texttt{T1} & $0.0500$ & $292.8$ & \citet{BPP1855} Mail Packet Returns \\
 \texttt{ATL-1866-JUL} & 1866-07-28 & Submarine Cable (20w) & \texttt{T1} & $20.0000$ & $0.25$ & BT Archives \texttt{Ref:\ TGP}; \citet{Bright1866} \\
 \texttt{ATL-1866-NOV} & 1866-11-01 & Submarine Cable (20w) & \texttt{T1} & $10.0000$ & $0.25$ & \textit{The Times} (2 Nov 1866, p.\ 7) \\
 \texttt{ATL-1867-DEC} & 1867-12-01 & Submarine Cable (10w) & \texttt{T1} & $5.2500$ & $0.25$ & US Serial Set \texttt{01442}; \citet{Webb1888} \\
@@ -130,82 +150,87 @@ Rates declined through discrete competitive shocks (Table~\ref{tab:atlantic_mile
 \end{tabularx}
 \begin{tablenotes}
 \footnotesize
-\item[a] $\pounds 0.0333$ ($8\,\text{d.}$ ship letter) vs.\ $\pounds 0.0625$ ($1\,\text{s.}\,3\,\text{d.}$ packet). \item[b] Dual-rate price war: $\pounds 0.0250$ ($12\text{\textcent}$ pool) vs.\ $\pounds 0.0500$ ($25\text{\textcent}$ Commercial Cable).
+\item[a] $\gbp 0.0333$ ($8\,\text{d.}$ ship letter) vs.\ $\gbp 0.0625$ ($1\,\text{s.}\,3\,\text{d.}$ Falmouth--NY packet).
+\item[b] Dual-rate price war: $\gbp 0.0250$ ($12\text{\textcent}$ pool) vs.\ $\gbp 0.0500$ ($25\text{\textcent}$ Commercial Cable).
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
 
-\section{Synthesizing the 4,000-Year Trajectory}
-\label{sec:synthesis}
+\section{Act III: Multiplexed Abundance and the Modern Boundary Illusion (1956--2026)}
+\label{sec:act3}
 
-Plotted chronologically by corridor (Figure~\ref{fig:macro_spine}), three structural regimes emerge: (1) \textbf{Pre-Telegraphic Institutional Commercialization ($301$--$1855\,\text{AD}$)}, where real costs fell two orders of magnitude ($288.00$ to $0.87$--$1.82\,\text{labor-hours}$) while transit latency remained $192$--$384\,\text{h}$; (2) \textbf{The 1866 Speed--Cost Inversion}, where submarine telegraphy cut latency to $0.25\,\text{h}$ ($0.02\,\text{h}$ wire signaling) while raising real cost $169\times$ ($307.69\,\text{labor-hours}$); and (3) \textbf{Multiplexed Convergence ($1956$--$2026$)}, uniting sub-second latency with near-zero marginal transmission cost.
+The final act of this four-millennium trajectory (Figure~\ref{fig:macro_spine}) is defined by the transition from dedicated physical circuits to multiplexed optical abundance. By $2026$, dense wavelength-division multiplexing (\texttt{DWDM}) across terrestrial European backbones and transatlantic submarine fiber-optic cables has driven the marginal cost of transmitting information across distance virtually to zero. To map monthly wholesale bandwidth lease rates $P_{\text{lease}}$ (per capacity $B$ in bits/second) into real labor-hours per standardized one-million-word data packet ($M = 4.8 \times 10^{7}\,\text{bits}$ at $6\,\text{bytes/word} = 48\,\text{bits/word}$) across a $30$-day billing month ($T_{\text{mo}} = 2.592 \times 10^{6}\,\text{s}$) at utilization duty cycle $u \in (0,1]$ and hourly wage $w$, we evaluate:
+\begin{equation}
+\text{LH}_{2026} = \frac{P_{\text{lease}} \cdot M}{B \cdot T_{\text{mo}} \cdot u \cdot w}.
+\label{eq:wholesale_2026}
+\end{equation}
+At $100\%$ peak capacity ($u = 1.0$), European \texttt{DWDM} IP transit at $€2.00/\text{Mbps/month}$ normalized against Eurostat's $€28.50/\text{hour}$ Euro-area hourly wage \citep{TeleGeography2026} yields $\mathbf{1.30 \times 10^{-6}\,\text{labor-hours}}$ per million-word message ($2.60 \times 10^{-6}\,\text{LH}$ at a $50\%$ duty cycle), while transatlantic subsea fiber capacity at $\$7.80/\text{Gbps/month}$ normalized against US BLS average hourly earnings of $\$37.17/\text{hour}$ \citep{SubTelForum2026} yields $\mathbf{3.89 \times 10^{-9}\,\text{labor-hours}}$ ($7.77 \times 10^{-9}\,\text{LH}$ at $50\%$ utilization)---a $334\times$ per-bit difference between regional transit and high-capacity transoceanic backbones, with physical propagation latency measured in milliseconds ($10^{-4}\,\text{hours}$).
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.92\textwidth}{\centering\vspace{0.9cm}
-\textbf{[Figure 1: Real Communication Cost (\texttt{labor\_hours\_per\_message}, Log Scale) vs.\ Transit Latency by Corridor, 1895\,BC--2026\,AD]}\\[0.3em]
-\footnotesize\textit{Plotting Specification:} Separate chronological lines for \texttt{Antwerp--Venice} and \texttt{London--New York}, distinct markers for Ancient/Medieval anchors, and triangles for \texttt{M/C-T-2-SENS} and \texttt{M/C-T-3-SENS}.
-\vspace{0.9cm}}}
-\caption{Long-Run Trajectory of Real Communication Costs and Transit Latency by Corridor}
+\includegraphics[width=0.98\textwidth]{figure1_macro_spine.pdf}
+\caption{Four Millennia of Real Communication Costs and Transit Latency by Corridor, 301\,AD--2026\,AD. \textit{Notes:} Top panels plot real communication cost per standardized message (log scale); bottom panels plot physical transit latency (log scale). Solid lines connect chronological baseline observations within each corridor; hollow triangles denote declared sensitivity specifications (250-word limit at 1855; July 1866 $\gbp 20$ rate and $17\,\text{wpm}$ wire signaling); open circles with dotted stems denote estimated door-to-door bounds for terminal-to-terminal observations.}
 \label{fig:macro_spine}
 \end{figure}
 
-\section{Modern Optical Networks: Wholesale vs.\ Retail Scope (2026)}
-\label{sec:modern_boundary}
-
-The 2026 macro-spine endpoints (\texttt{M/C-E-5} EU \texttt{DWDM} IP transit at $€2.00/\text{Mbps/mo}$ vs.\ Eurostat $€28.50/\text{h}$, and \texttt{M/C-T-5} transatlantic subsea fiber at $\$7.80/\text{Gbps/mo}$ vs.\ US BLS $\$37.17/\text{h}$) yield $\mathbf{0.000001\,\text{labor-hours}}$ per message, representing \textit{marginal wholesale backbone capacity} (\texttt{T3}). Table~\ref{tab:modern_boundary} contrasts these wholesale allocations against 2026 retail fixed-broadband subscriptions (\texttt{T1}) from UK Ofcom ($\pounds 37.50/\text{mo}$, bounds $\pounds 30.00$--$\pounds 45.00$) and the US FCC ($\$50.00/\text{mo}$, bounds $\$40.00$--$\$60.00$).
+Synthesizing modern optical data with historical series, however, exposes a persistent boundary illusion in long-run cliometric price indices. Historical postal and telegraph tariffs measure retail transaction prices---what a citizen or merchant paid at the counter for an individual message. Attempting to anchor the 2026 terminus using consumer fixed-broadband subscriptions---which average $\gbp 37.50/\text{month}$ (range $\gbp 30.00$--$\gbp 45.00$) in the United Kingdom \citep{Ofcom2026} and $\$50.00/\text{month}$ (range $\$40.00$--$\$60.00$) in the United States \citep{FCC2026}---conflates fixed local-loop access, consumer hardware, and billing overhead with the marginal cost of traversing distance (Table~\ref{tab:modern_boundary}). Once wholesale backbone transit is cleanly isolated from retail last-mile access, the long-run arc resolves into a coherent economic narrative: the state communication monopolies of antiquity were broken by early modern postal commerce, the acute speed--cost shock of the Victorian submarine telegraph was tamed by oligopolistic cable competition in the 1880s, and twentieth-century optical multiplexing finally united instantaneous transmission with near-zero marginal cost.
 
 \begin{table}[H]
 \centering
 \footnotesize
-\caption{2026 Modern Communication Scope Comparison: Wholesale Backbone vs.\ Retail Broadband}
-\label{tab:modern_boundary}
-\begin{tabularx}{\textwidth}{@{}llcccl@{}}
+\begin{tabularx}{\textwidth}{@{}llccX@{}}
 \toprule
-\textbf{Module} & \textbf{Benchmark Scope} & \textbf{Baseline} & \textbf{Bounds} & \textbf{Unit} & \textbf{Tier / Source} \\
+\textbf{Scope Class} & \textbf{2026 Communication Benchmark} & \textbf{Baseline} & \textbf{Bounds} & \textbf{Unit / Tier / Source} \\
 \midrule
-\texttt{Layer\_1\_2} & Wholesale IP Transit (EU) & $2.00$ & $1.50$--$2.50$ & $€$/Mbps/mo & \texttt{T3} (TeleGeography 2026) \\
-\texttt{Layer\_1\_2} & Wholesale Subsea Fiber (Transatlantic) & $7.80$ & $6.00$--$9.50$ & $\$$/Gbps/mo & \texttt{T3} (Submarine Telecoms Forum 2026) \\
-\texttt{Section\_5\_1} & Retail Fixed Broadband (UK) & $37.50$ & $30.00$--$45.00$ & $\pounds$/month & \texttt{T1} (UK Ofcom Benchmark 2026) \\
-\texttt{Section\_5\_1} & Retail Fixed Broadband (US) & $50.00$ & $40.00$--$60.00$ & $\$$/month & \texttt{T1} (US FCC Benchmark 2026) \\
+Wholesale Backbone & European IP Transit (\texttt{DWDM}) & $2.00$ & $1.50$--$2.50$ & $€$/Mbps/mo (\texttt{T3}, \citealt{TeleGeography2026}) \\
+Wholesale Backbone & Transatlantic Subsea Fiber & $7.80$ & $6.00$--$9.50$ & $\$$/Gbps/mo (\texttt{T3}, \citealt{SubTelForum2026}) \\
+Retail Access & UK Fixed Broadband Subscription & $37.50$ & $30.00$--$45.00$ & $\gbp$/month (\texttt{T1}, \citealt{Ofcom2026}) \\
+Retail Access & US Fixed Broadband Subscription & $50.00$ & $40.00$--$60.00$ & $\$$/month (\texttt{T1}, \citealt{FCC2026}) \\
 \bottomrule
 \end{tabularx}
+\caption{2026 Modern Communication Scope Comparison: Wholesale Backbone vs.\ Retail Broadband}
+\label{tab:modern_boundary}
 \end{table}
 
-\section{Conclusion and Data Availability}
+\section{Conclusion and Replication Archive}
 \label{sec:conclusion}
 
-Real communication costs did not fall monotonically with physical speed: commercial postal institutions drove the first affordability revolution ($1395$--$1855$), whereas submarine telegraphy triggered an acute 1866 speed--cost inversion resolved only by competitive cable entry in the 1880s and optical multiplexing. All datasets and verification scripts (\texttt{scripts/audit\_replication\_package.py}) are archived at \url{https://github.com/rbastiaanssen-tech/cliometric-portal}.
+By pairing a standardized labor-hour num\'eraire with explicit operational boundaries and an auditable three-tier evidence hierarchy, this study demonstrates that real communication costs and physical transmission speeds followed fundamentally distinct historical trajectories. Institutional commercialization between $1395$ and $1855$ delivered a hundredfold reduction in real messaging costs without breaking physical transport speed limits, whereas the 1866 transatlantic telegraph solved physical latency overnight while temporarily returning real message costs to late Roman levels. Only when competitive entry broke Atlantic cable cartels in the 1880s and coaxial and optical multiplexing expanded channel capacity in the twentieth century did high-speed communication become a mass-market utility. All replication datasets, custodial archival logs, and automated verification scripts (\path{scripts/audit_replication_package.py}) are publicly archived at \url{https://github.com/rbastiaanssen-tech/cliometric-portal}.
 
 \appendix
 
-\section{Archival Shelfmark Ledger (\texttt{T2}/\texttt{T3} Pending Digitization Queue)}
+\section{Archival Evidence Taxonomy and Custodial Shelfmark Ledger}
 \label{app:archival_ledger}
 
-Custodial shelfmarks awaiting physical scan delivery are logged in \texttt{public/data/master\_benchmarks.csv} and \texttt{atlantic\_milestones.csv}: K\"ultepe tablets (\textit{BIN} 4 124, \textit{TPAK} 1 38); Tang \textit{Yizhan tiaoli}; Archivio di Stato di Prato (\textit{Datini, buste 600--605}); F\"urst Thurn und Taxis Archiv (\textit{Postakten 1284}); The Postal Museum (\texttt{POST 43/112} ff.\ 84--88; \texttt{POST 101/184}); Archives Nationales (\texttt{F/90/21276}); BT Archives (\texttt{Ref:\ TGP}); PK Porthcurno (\texttt{BL C.132.h.27}); and IET Archives (\texttt{UK0108 SC MSS 008}).
+Every observation in our dataset is scored independently for tariff pricing (\textit{Tariff Tier}) and payload or throughput standardization (\textit{Capacity Tier}):
+\begin{enumerate}
+    \item \textbf{Tier 1 (\texttt{T1} --- Authenticated Primary):} Transcribed directly from contemporary statutory enactments, bilateral postal conventions, official gazettes, or primary corporate tariff schedules.
+    \item \textbf{Tier 2 (\texttt{T2} --- Corroborated Secondary):} Established from peer-reviewed postal and economic historiography where physical folio scans from custodial archives remain queued for remote digitization.
+    \item \textbf{Tier 3 (\texttt{T3} --- Parameterized Calibration):} Stylized institutional or engineering baselines where open-access commercial tariffs did not exist (Roman \textit{cursus publicus} shadow proxy and Tang \textit{Yizhan} relays) or where 2026 marginal costs reflect wholesale backbone capacity allocations.
+\end{enumerate}
 
-\section{Theoretical Quote-Age Risk Model and Break-Even Derivation ($H^*$)}
+Custodial shelfmarks queued for remote folio verification are logged in the replication repository: K\"ultepe cuneiform editions (\textit{BIN} 4 124, \textit{TPAK} 1 38); Tang statutory compendia (\textit{Yizhan tiaoli}); Archivio di Stato di Prato (\textit{Datini, buste 600--605}); F\"urst Thurn und Taxis Archiv (\textit{Postakten 1284}); The Postal Museum (\texttt{POST 43/112} ff.\ 84--88; \texttt{POST 101/184}); Archives Nationales (\texttt{F/90/21276}); BT Archives (\texttt{Ref:\ TGP}); PK Porthcurno (\texttt{BL C.132.h.27}); IET Archives (\texttt{UK0108 SC MSS 008}); and \citet{Scholliers1995} Belgian industrial wage series.
+
+\section{Quote-Age Risk Derivations and Volatility Scaling ($H^*$)}
 \label{app:quote_age}
 
-Consider a risk-averse transatlantic arbitrageur choosing between a slow postal dispatch ($C_{\text{packet}}, L_{\text{packet}}$) and a rapid telegraphic dispatch ($C_{\text{telegraph}}, L_{\text{telegraph}}$). The break-even threshold $H^*$---the minimum marginal value of reducing quote age by one hour required to justify the telegraphic premium---is:
-\begin{equation}
-H^* = \frac{\Delta C}{\Delta L} = \frac{C_{\text{telegraph}} - C_{\text{packet}}}{L_{\text{packet}} - L_{\text{telegraph}}}.
-\label{eq:breakeven_h}
-\end{equation}
-Evaluating Equation~\eqref{eq:breakeven_h} from our Paper~1 baseline tariff inputs across the 1855--1866 transition yields our baseline break-even derivation $\mathbf{H^*_0 = 2.515\,\text{labor-hours per hour of quote age}}$.
-
-We scale $H^*_0$ using \citet{Steinwender2018}'s empirical cotton price dispersion estimates for the Liverpool--New York market across the 1866 cable shock ($N = 604$ trading days):
-\begin{enumerate}
-    \item \textbf{Lag-Variance Elasticity Bounds (\citealt{Steinwender2018}, Table 3):} Scaling $H^*_0 = 2.515$ across Steinwender's log-variance lag elasticity range $\beta \in [0.13, 0.20]$ around $\beta_0 = 0.17\,\text{log points/day}$ ($\text{SE} = 0.08$) yields:
+Evaluating Equation~\eqref{eq:breakeven_h} across the 1866 transatlantic transition reconciles our baseline break-even parameter $H^*_0$ with the sensitivity bounds in \texttt{public/data/sensitivity\_parameters.csv}:
+\begin{itemize}
+    \item \textbf{Baseline Break-Even Derivation ($H^*_0 = 2.515\,\text{LH/h}$):} Pairing the July 1866 opening cable tariff ($C_{\text{telegraph}} = 615.38\,\text{LH}$, $L_{\text{telegraph}} = 0.25\,\text{h}$) against the contemporary 1866 pre-cable steamship mean crossing of $10.18\,\text{days}$ ($L_{\text{packet, 1866}} = 244.20\,\text{h}$; \citealt{Steinwender2018}) and $C_{\text{packet}} = 1.82\,\text{LH}$ yields:
     \begin{equation}
-    H^*_{\text{low}} = 2.515 \times \frac{0.13}{0.17} = \mathbf{1.923\,\text{labor-hours/hour}}, \qquad
-    H^*_{\text{high}} = 2.515 \times \frac{0.20}{0.17} = \mathbf{2.959\,\text{labor-hours/hour}}.
+    H^*_0 = \frac{615.38 - 1.82}{244.20 - 0.25} = \mathbf{2.515\,\text{labor-hours per hour of quote age}}.
     \end{equation}
-    \item \textbf{Post-Cable Volatility Collapse Regime (\citealt{Steinwender2018}, Table 1):} Following the July 1866 cable opening, transatlantic cotton price-difference variance fell by $93\%$ ($\sigma^2_{\text{post}} / \sigma^2_{\text{pre}} = 0.07$, or a $73.5\%$ standard deviation drop, $\sigma_{\text{post}} / \sigma_{\text{pre}} = \sqrt{0.07} = 0.265$), yielding a post-integration threshold of:
+    \item \textbf{Table~\ref{tab:master_benchmarks} 1855-Lag Comparisons:} Substituting Table~\ref{tab:master_benchmarks}'s 1855 steam-packet mean crossing ($L_{\text{packet, 1855}} = 292.80\,\text{h}$) yields $H^*_{\text{1855, Jul}} = \frac{615.38 - 1.82}{292.80 - 0.25} = \mathbf{2.097\,\text{LH/h}}$ at the July tariff and $H^*_{\text{1855, Nov}} = \frac{307.69 - 1.82}{292.80 - 0.25} = \mathbf{1.046\,\text{LH/h}}$ at the November $\gbp 10$ tariff (comparing a 20-word cablegram against a 400-word letter; normalizing per 100 words gives $5.257\,\text{LH/h}$).
+    \item \textbf{Steinwender (2018) Volatility Scaling:} Scaling $H^*_0 = 2.515$ across \citet{Steinwender2018}'s Table~3 log-variance lag elasticity range $\beta \in [0.13, 0.20]$ around $\beta_0 = 0.17\,\text{log points/day}$ ($\text{SE} = 0.08$) yields sensitivity bounds of:
     \begin{equation}
-    H^*_{\text{SD-post}} = 2.515 \times 0.265 = \mathbf{0.666\,\text{labor-hours/hour}}.
+    H^*_{\text{low}} = 2.515 \times \frac{0.13}{0.17} = \mathbf{1.923\,\text{LH/h}}, \qquad
+    H^*_{\text{high}} = 2.515 \times \frac{0.20}{0.17} = \mathbf{2.959\,\text{LH/h}}.
     \end{equation}
-\end{enumerate}
+    Scaling $H^*_0$ to the post-cable standard deviation regime (\citealt{Steinwender2018}, Table~1: $93\%$ variance drop, $\sigma_{\text{post}} / \sigma_{\text{pre}} = \sqrt{0.07} = 0.265$) yields:
+    \begin{equation}
+    H^*_{\mathrm{SD\text{-}post}} = 2.515 \times 0.265 = \mathbf{0.666\,\text{LH/h}}.
+    \end{equation}
+\end{itemize}
 
 \begin{thebibliography}{99}
 \bibitem[Allen(2001)]{Allen2001} Allen, Robert C. 2001. ``The Great Divergence in European Wages and Prices from the Middle Ages to the First World War.'' \textit{Explorations in Economic History} 38(4): 411--447.
@@ -216,22 +241,31 @@ We scale $H^*_0$ using \citet{Steinwender2018}'s empirical cotton price dispersi
 \bibitem[Bowley(1900)]{Bowley1900} Bowley, Arthur L. 1900. \textit{Wages in the United Kingdom in the Nineteenth Century}. Cambridge: Cambridge University Press.
 \bibitem[Bright(1866)]{Bright1866} Bright, Charles Tilston. 1866. ``The Atlantic Telegraph.'' \textit{Proceedings of the Institution of Civil Engineers} 25: 1--35.
 \bibitem[Bright(1898)]{Bright1898} Bright, Charles. 1898. \textit{Submarine Telegraphs}. London: Crosby Lockwood.
+\bibitem[British Parliamentary Papers(1849)]{BPP1849} British Parliamentary Papers. 1849. \textit{Convention between Her Majesty and the United States of America, for the Improvement of the Communication by Post}, Command Paper [1012]. London: HMSO.
+\bibitem[British Parliamentary Papers(1855)]{BPP1855} British Parliamentary Papers. 1855. \textit{Mail Packet Returns: North American Mail Steamers}. London: HMSO.
 \bibitem[Chandler(1977)]{Chandler1977} Chandler, Alfred D., Jr. 1977. \textit{The Visible Hand}. Cambridge, MA: Harvard University Press.
 \bibitem[Dallmeier(1977)]{Dallmeier1977} Dallmeier, Martin. 1977. \textit{Quellen zur Geschichte des europ\"aischen Postwesens 1501--1806}. Kallm\"unz: Lassleben.
 \bibitem[Dercksen(2004)]{Dercksen2004} Dercksen, Jan Gerrit. 2004. \textit{Old Assyrian Institutions}. Leiden: NINO.
+\bibitem[Federal Communications Commission(2026)]{FCC2026} Federal Communications Commission (FCC). 2026. \textit{2026 Urban Rate Survey: Fixed Broadband Benchmark}. Washington, DC: FCC.
 \bibitem[Frangioni(1994)]{Frangioni1994} Frangioni, Luciana. 1994. \textit{Organizzazione e costi del servizio postale alla fine del Trecento}. Prato: Istituto Datini.
 \bibitem[Harley(1988)]{Harley1988} Harley, C. Knick. 1988. ``Ocean Freight Rates and Productivity, 1740--1913.'' \textit{Journal of Economic History} 48(4): 851--876.
 \bibitem[Innis(1950)]{Innis1950} Innis, Harold A. 1950. \textit{Empire and Communications}. Oxford: Clarendon Press.
+\bibitem[International Telegraph Union(1872)]{ITU1872} International Telegraph Union (ITU). 1872. \textit{Documents de la Conf\'erence T\'el\'egraphique Internationale de Rome}. Berne: Bureau International des Administrations T\'el\'egraphiques.
 \bibitem[Joyce(1893)]{Joyce1893} Joyce, Herbert. 1893. \textit{The History of the Post Office}. London: Richard Bentley.
 \bibitem[Kolb(2000)]{Kolb2000} Kolb, Anne. 2000. \textit{Transport und Nachrichtentransfer im R\"omischen Reich}. Berlin: Akademie Verlag.
 \bibitem[Larsen(1976)]{Larsen1976} Larsen, Mogens Trolle. 1976. \textit{The Old Assyrian City-State and Its Colonies}. Copenhagen: Akademisk Forlag.
 \bibitem[Malanima(2007)]{Malanima2007} Malanima, Paolo. 2007. ``Wages, Productivity and Working Time in Italy, 1300--1913.'' \textit{Journal of European Economic History} 36(1): 127--171.
 \bibitem[Melis(1962)]{Melis1962} Melis, Federigo. 1962. \textit{Aspetti della vita economica medievale}. Siena: Monte dei Paschi.
+\bibitem[Ministry of Labour(1956)]{MinLabour1956} Ministry of Labour and National Service. 1956. ``Earnings and Hours in October 1956.'' \textit{Ministry of Labour Gazette} 64(10): 361--368.
 \bibitem[Nordhaus(1996)]{Nordhaus1996} Nordhaus, William D. 1996. ``Do Real-Output and Real-Wage Measures Capture Reality?'' In \textit{The Economics of New Goods}, 29--66. Chicago: University of Chicago Press.
 \bibitem[North(1958)]{North1958} North, Douglass C. 1958. ``Ocean Freight Rates and Economic Development, 1750--1913.'' \textit{Journal of Economic History} 18(4): 537--555.
+\bibitem[Ofcom(2026)]{Ofcom2026} Office of Communications (Ofcom). 2026. \textit{Pricing Trends for Communications Services in the UK (2026)}. London: Ofcom.
 \bibitem[Pred(1973)]{Pred1973} Pred, Allan R. 1973. \textit{Urban Growth and the Circulation of Information}. Cambridge, MA: Harvard University Press.
 \bibitem[R\"ubsam(1889)]{Rubsam1889} R\"ubsam, Josef. 1889. \textit{Johann Baptista von Taxis}. Freiburg: Herder.
+\bibitem[Scholliers(1995)]{Scholliers1995} Scholliers, Peter. 1995. ``A Century of Real Industrial Wages in Belgium, 1840--1939.'' In \textit{Labour's Reward}, edited by P.\ Scholliers and V.\ Zamagni, 106--137. Aldershot: Edward Elgar.
 \bibitem[Steinwender(2018)]{Steinwender2018} Steinwender, Claudia. 2018. ``Real Effects of Information Frictions: When the States and the Kingdom Became United.'' \textit{American Economic Review} 108(3): 657--696.
+\bibitem[Submarine Telecoms Forum(2026)]{SubTelForum2026} Submarine Telecoms Forum. 2026. \textit{Submarine Telecoms Industry Report, 14th Edition}. Sterling, VA: Submarine Telecoms Forum.
+\bibitem[TeleGeography(2026)]{TeleGeography2026} TeleGeography. 2026. \textit{Global Internet Geography \& IP Transit Pricing Report (2026)}. Washington, DC: PriMetrica.
 \bibitem[U.S.\ Bureau of the Census(1960)]{USCensus1960} U.S.\ Bureau of the Census. 1960. \textit{Historical Statistics of the United States, Colonial Times to 1957}. Washington, DC: GPO.
 \bibitem[Van der Wee(1963)]{VanderWee1963} Van der Wee, Herman. 1963. \textit{The Growth of the Antwerp Market and the European Economy}. The Hague: Martinus Nijhoff.
 \bibitem[Veenhof(2008)]{Veenhof2008} Veenhof, Klaas R. 2008. ``The Old Assyrian Period.'' In \textit{Mesopotamia: The Old Assyrian Period}, 13--264. Fribourg: Academic Press.
