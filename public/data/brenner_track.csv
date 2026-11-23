@@ -1,0 +1,5 @@
+id,item_name,year,source_anchor,evidence_tier,tariff_value,currency,status,required_action
+BRN-1850-DOTV,"DÖTV 1850 Austro-German Telegraph Treaty",1850,"Austrian Reichsgesetzblatt RGBl. Nr. 361/1850 (Dresden Treaty)",T1,"Zone tariff (Art. 12, 17, 26, 27)","Florin / Kreuzer","Verified institutional baseline","Maintain as documented regulatory baseline; note domestic Austrian deviations under Art. 2"
+BRN-1850-CAND,"Brenner Candidate Line (Innsbruck-Verona)",1850,"RGBl. Nr. 327/1850; Innsbruck Municipal Archive",T3,"60 (unverified)","Kreuzer","Unpromoted candidate","Verify whole-route decrees in Tiroler Landesarchiv Statthalterei records (1850-1852) before merging"
+BRN-1867-RAIL,"Brenner Railway Full Pass Opening",1867,"Austrian Railway Records; Municipal Archive",T1,"N/A (infrastructure milestone)","N/A","Corroborated historical date (24 Aug 1867)","Fully documented in brenner_source_audit.md"
+BRN-1635-POST,"1635 Imperial Postal Taxordnung",1635,"Rubsam (1889); Dallmeier (1977)",T2,"18 (per 1 Loth)","Kreuzer","Provisional source lead","Inspect Kaiserliche Post-Ordnung scans in Bayerisches Hauptstaatsarchiv Munich or Regensburg"

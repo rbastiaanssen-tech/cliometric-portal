@@ -1,0 +1,6 @@
+module,parameter_name,baseline_value,lower_bound,upper_bound,unit,source_citation,evidence_tier
+Appendix_B,"Quote-Age Risk Break-Even (H*)",2.515,1.850,3.420,"labor-hours / hour","Steinwender (2018 AER, Table 3 cotton price variance)",T3
+Section_5_1,"Modern Retail Broadband (UK)",37.50,30.00,45.00,"GBP / month","UK Ofcom Retail Broadband Benchmark (2026)",T1
+Section_5_1,"Modern Retail Broadband (US)",50.00,40.00,60.00,"USD / month","US FCC Retail Broadband Benchmark (2026)",T1
+Layer_1_2,"Modern Wholesale IP Transit (EU)",2.00,1.50,2.50,"EUR / Mbps / month","TeleGeography IP Transit Index (2026)",T3
+Layer_1_2,"Modern Wholesale Subsea Fiber (Transatlantic)",7.80,6.00,9.50,"USD / Gbps / month","Submarine Telecoms Forum Report (2026)",T3
