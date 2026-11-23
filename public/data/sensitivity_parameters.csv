@@ -1,6 +1,6 @@
 module,parameter_name,baseline_value,lower_bound,upper_bound,unit,source_citation,evidence_tier
-Appendix_B,"Quote-Age Risk Break-Even H* (Table 3 Lag Elasticity)",2.515,1.923,2.959,"labor-hours / hour","Steinwender (2018 AER, Table 3: beta=0.17 [0.13, 0.20] log var/day)",T3
-Appendix_B,"Quote-Age Risk Break-Even H* (Table 1 Post-Cable SD Regime)",2.515,0.666,2.515,"labor-hours / hour","Steinwender (2018 AER, Table 1: 93% variance / 73.5% SD drop post-1866)",T3
+Appendix_B,"Quote-Age Risk Break-Even H* (Table 3 Lag Elasticity)",2.515,1.923,2.959,"labor-hours / hour","Authors' Appendix B break-even derivation (2.515); sensitivity bounds scaled via Steinwender (2018 AER, Table 3: beta=0.17 [0.13, 0.20] log var/day)",T3
+Appendix_B,"Quote-Age Risk Break-Even H* (Table 1 Post-Cable SD Regime)",0.666,0.666,2.515,"labor-hours / hour","Authors' Appendix B break-even derivation (2.515); post-cable SD regime (0.666) scaled via Steinwender (2018 AER, Table 1: 73.5% SD drop post-1866)",T3
 Section_5_1,"Modern Retail Broadband (UK)",37.50,30.00,45.00,"GBP / month","UK Ofcom Retail Broadband Benchmark (2026)",T1
 Section_5_1,"Modern Retail Broadband (US)",50.00,40.00,60.00,"USD / month","US FCC Retail Broadband Benchmark (2026)",T1
 Layer_1_2,"Modern Wholesale IP Transit (EU)",2.00,1.50,2.50,"EUR / Mbps / month","TeleGeography IP Transit Index (2026)",T3
