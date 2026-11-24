@@ -10,7 +10,7 @@ OUT_PDF = Path("manuscript/figure2_gvk_distance_latency.pdf")
 OUT_PNG = Path("manuscript/figure2_gvk_distance_latency.png")
 
 POINTS = [
-    ("301 AD · Rome-Brundisium", 530, 6.912e5, "Ancient", -10, -2, "right"),
+    ("301 AD · Rome-Brundisium", 533, 6.912e5, "Ancient", -10, -2, "right"),
     ("1895 BC · Assur-Kultepe", 1000, 2.419e6, "Ancient", -10, 7, "right"),
     ("1395 · Antwerp-Venice", 1150, 1.382e6, "Antwerp-Venice", 10, 6, "left"),
     ("1635 · Antwerp-Venice", 1150, 1.037e6, "Antwerp-Venice", 10, -5, "left"),

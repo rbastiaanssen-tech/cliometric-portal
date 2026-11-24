@@ -124,7 +124,7 @@ Calibrating at a representative nineteenth-century commodity volatility of $\sig
 \begin{itemize}
     \item \textbf{July 1866 (\gbp 20):} $V^*$ required a vast \gbp 1,668 plain-text shipment (or \gbp 330 with $5{:}1$ codebook compression), restricting use to wholesale cotton houses and sovereign bond arbitrageurs.
     \item \textbf{November 1866 (\gbp 10):} $V^*$ fell to \gbp 831 (or \gbp 162 coded), accessible to large grain and metals importers.
-    \item \textbf{May 1886 ($6\,\text{d./w}$ rate war):} Following Commercial Cable Company's entry in December $1884$ ($40\ct$/word), the pool rate war lowered $V^*$ to just \gbp 37 (or \gbp 3 coded), finally opening the cable to retail trade orders and daily press dispatches before the July $1888$ cartel pact stabilized rates at $1\,\text{s.}$ ($25\ct$).
+    \item \textbf{May 1886 ($6\,\text{d./w}$ rate war):} Following Commercial Cable Company's entry in December $1884$ ($40\ct$/word), the May $1886$ pool rate war lowered $V^*$ to just \gbp 36 (or \gbp 3 coded; \gbp 37 at constant $1866$ wages) after accounting for \citet{Bowley1900}'s $9.0\,\text{d./h}$ London building craftsman wage in the $1880\text{s}$, finally opening the cable to retail trade orders and daily press dispatches before the July $1888$ cartel pact stabilized rates at $1\,\text{s.}$ ($25\ct$, $V^* = \gbp 78$ plain / \gbp 11 coded).
 \end{itemize}
 
 Within continental Europe (\texttt{Antwerp--Venice}), the \citet{ITU1872} Rome Convention standardized Belgium--Italy twenty-word telegrams at $6.50\,\text{gold francs}$ ($2.50\,\text{h}$ terminal-to-terminal). Normalized against \citet{Scholliers1995}'s Belgian male industrial/building craftsman wage ($3.50\,\text{BEF}$ per $10$-hour day, or $0.35\,\text{BEF/h}$), real cost rose from $0.87\,\text{LH}$ ($1635$) to $\mathbf{\lhBEeighteenMsg\,\text{LH/Msg}}$ ($\mathbf{\lhBEeighteenHundred\,\text{LH/100w}}$)---confirming an attenuated intra-European speed--cost inversion---before interwar telephony ($24.00\,\text{BEF}$ for a three-minute Brussels--Rome call in $1935$ against $40.00\,\text{BEF}$ per $8$-hour day, or $5.00\,\text{BEF/h}$) lowered real voice cost to $\mathbf{\lhBEnineteenMsg\,\text{LH/Msg}}$ ($\mathbf{\lhBEnineteenHundred\,\text{LH/100w}}$). Across the Atlantic, the \texttt{TAT-1} coaxial cable (September 25, $1956$) cut a three-minute call ($450\,\text{spoken words}$) to \gbp 3 ($720\,\text{d.}$), or $\mathbf{12.20\,\text{LH}}$ ($\mathbf{2.71\,\text{LH/100w}}$) against UK male manual earnings of $59\,\text{d.}$/hour \citep{MinLabour1956}.
@@ -135,38 +135,36 @@ Within continental Europe (\texttt{Antwerp--Venice}), the \citet{ITU1872} Rome C
 \begin{threeparttable}
 \caption{Master Macro-Spine and Sensitivity Benchmarks, 301\,AD--2026\,AD}
 \label{tab:master_spine}
-\resizebox{\textwidth}{!}{%
-\setlength{\tabcolsep}{4pt}
+\setlength{\tabcolsep}{2.2pt}
 \begin{tabular}{@{}llclllrrrr@{}}
 \toprule
 \textbf{ID} & \textbf{Corridor} & \textbf{Year} & \textbf{Tiers}\tnote{a} & \textbf{Spec.} & \textbf{Nominal Tariff} & \textbf{Words} & \textbf{Transit (h)}\tnote{b} & \textbf{LH/Msg} & \textbf{LH/100w} \\
 \midrule
 M/C-A-2      & Rome--Brundisium  & 301  & T3/T3 & Base\tnote{c}  & 720 d.c.\ (Cap.\ 17.1) & 100    & 192.0 (D)      & 144.00               & 144.00 \\
 M/C-A-2-SENS & Rome--Brundisium  & 301  & T3/T3 & Sens.\ ($k{=}10$) & 72.0 d.c./msg      & 100    & 192.0 (D)      & 14.40                & 14.40 \\
-\addlinespace[3pt]
+\addlinespace[2pt]
 M/C-E-1      & Antwerp--Venice   & 1395 & T1/T2 & Base           & 0.50 fl.\ (38 soldi)  & 400    & 384.0 (D)      & 19.00                & 4.75 \\
 M/C-E-2      & Antwerp--Venice   & 1635 & T2/T3 & Base           & 18 kr.\ (4 Br.\ gr.)  & 400    & 288.0 (D)      & 0.87                 & 0.22 \\
-\addlinespace[3pt]
+\addlinespace[2pt]
 M/C-T-1      & London--New York  & 1825 & T2/T3 & Base           & 18 d.\ (1s.\ 6d.)     & 400    & 648.0 (D)      & 3.33                 & 0.83 \\
 M/C-T-2      & London--New York  & 1855 & T1/T3 & Base           & 12 d.\ (1s./0.5 oz)   & 400    & 292.8 (D)      & 1.82                 & 0.46 \\
 M/C-T-2-SENS & London--New York  & 1855 & T1/T1 & Sens.\ (250w)  & 12 d.\ (1s./0.5 oz)   & 250    & 292.8 (D)      & 1.82                 & 0.73 \\
-\addlinespace[3pt]
+\addlinespace[2pt]
 M/C-T-3      & London--New York  & 1866 & T1/T2 & Base (Nov)     & 2,400 d.\ (\gbp 10)   & 20     & 0.25 (T)       & 307.69               & 1,538.45 \\
 M/C-T-3-SENS & London--New York  & 1866 & T1/T1 & Sens.\ (Jul)   & 4,800 d.\ (\gbp 20)   & 20     & 0.02 (W)       & 615.38               & 3,076.90 \\
-\addlinespace[3pt]
+\addlinespace[2pt]
 M/C-E-3      & Antwerp--Venice   & 1872 & T1/T2 & Base\tnote{d}  & 6.50 gold francs      & 20     & 2.50 (T)       & \lhBEeighteenMsg     & \lhBEeighteenHundred \\
 M/C-E-4      & Antwerp--Venice   & 1935 & T1/T2 & Base\tnote{d}  & 24.00 BEF (3m call)   & 450    & 0.25 (T)       & \lhBEnineteenMsg     & \lhBEnineteenHundred \\
-\addlinespace[3pt]
+\addlinespace[2pt]
 M/C-T-4      & London--New York  & 1956 & T1/T3 & Base (TAT-1)   & 720 d.\ (\gbp 3, 3m)  & 450    & 0.10 (T)       & 12.20                & 2.71 \\
-M/C-T-5      & London--New York  & 1965 & T1/T2 & Base (Intelsat I)\tnote{e} & \$12.00 (3m call) & 450 & 0.27 (T)  & 4.62                 & 1.03 \\
-M/C-T-6      & London--New York  & 1988 & T1/T2 & Base (TAT-8)\tnote{e} & \$3.00 (3m call) & 450   & 0.05 (T)       & 0.31                 & 0.07 \\
-\addlinespace[3pt]
+M/C-T-5      & London--New York  & 1965 & T1/T2 & Base (Intelsat)\tnote{e} & \$12.00 (3m) & 450    & 0.27 (T)       & 4.62                 & 1.03 \\
+M/C-T-6      & London--New York  & 1988 & T1/T2 & Base (TAT-8)\tnote{e} & \$3.00 (3m)    & 450    & 0.05 (T)       & 0.31                 & 0.07 \\
+\addlinespace[2pt]
 M/C-E-5      & Antwerp--Venice   & 2026 & T3/T3 & Base (Whsl.)   & \eur 2.00/Mbps/mo     & $10^6$ & $10^{-4}$ (W) & $1.30 \times 10^{-6}$ & $1.30 \times 10^{-10}$ \\
 M/C-T-7      & London--New York  & 2026 & T3/T3 & Base (Whsl.)   & \$7.80/Gbps/mo        & $10^6$ & $10^{-4}$ (W) & $3.89 \times 10^{-9}$ & $3.89 \times 10^{-13}$ \\
-M/C-T-7-SENS & London--New York  & 2026 & T1/T2 & Sens.\ (Retail)\tnote{f} & \$50.00/mo (amort.) & $10^6$ & $10^{-4}$ (W) & $1.61 \times 10^{-5}$ & $1.61 \times 10^{-9}$ \\
+M/C-T-7-SENS & London--New York  & 2026 & T1/T2 & Sens.\ (Retail)\tnote{f} & \$50/mo (amort.) & $10^6$ & $10^{-4}$ (W) & $1.61 \times 10^{-5}$ & $1.61 \times 10^{-9}$ \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}
 \begin{tablenotes}[flushleft]
 \scriptsize
 \item[a] Evidence quality tiers (Tariff Tier / Capacity Tier): T1 = authenticated primary statute, treaty, or tariff schedule; T2 = corroborated secondary historiography; T3 = parameterized institutional or engineering calibration (Appendix A). Non-commercial state/syndicate relays (1895 BC Assur--K\"ultepe and 750 AD Chang'an--Guangzhou) are evaluated separately in Section 3.
@@ -185,9 +183,8 @@ M/C-T-7-SENS & London--New York  & 2026 & T1/T2 & Sens.\ (Retail)\tnote{f} & \$5
 \begin{threeparttable}
 \caption{Transatlantic Market-Structure Milestones and Arbitrage Thresholds ($V^*$), 1815--1988}
 \label{tab:atlantic_milestones}
-\resizebox{\textwidth}{!}{%
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}llllrrrl@{}}
+\setlength{\tabcolsep}{3.0pt}
+\begin{tabularx}{\textwidth}{@{}llllrrrX@{}}
 \toprule
 \textbf{Milestone ID} & \textbf{Date} & \textbf{Mode} & \textbf{Tier} & \textbf{Rate (\gbp/\$)} & \textbf{Mean (h)} & \textbf{$V^*$ (Plain / 5:1)}\tnote{c} & \textbf{Primary / Archival Anchor} \\
 \midrule
@@ -198,15 +195,14 @@ M/C-T-7-SENS & London--New York  & 2026 & T1/T2 & Sens.\ (Retail)\tnote{f} & \$5
 \texttt{ATL-1866-NOV} & 1866-11-01 & Submarine Cable (20w) & \texttt{T1} & \gbp 10.00 & $0.25$ & \gbp 831 / \gbp 162 & \textit{The Times} (2 Nov 1866, p.\ 7) \\
 \texttt{ATL-1869-JUN} & 1869-06-01 & Submarine Cable (10w) & \texttt{T2} & \gbp 1.500 & $0.25$ & \gbp 246 / \gbp 45 & Archives Nationales \texttt{F/90/21276} \\
 \texttt{ATL-1875-SEP} & 1875-09-01 & Submarine Cable (1w) & \texttt{T2} & \gbp 0.150 & $0.20$ & \gbp 246 / \gbp 45 & IET Archives \texttt{UK0108 SC MSS 008} \\
-\texttt{ATL-1884-DEC} & 1884-12-24 & Submarine Cable (1w) & \texttt{T1} & \gbp 0.083 & $0.15$ & \gbp 134 / \gbp 23 & \citet{USCensus1960}, Series R-46 (40\ct) \\
-\texttt{ATL-1886-MAY} & 1886-05-06 & Submarine Cable (1w) & \texttt{T1} & \gbp 0.025\tnote{b} & $0.15$ & \gbp 37 / \gbp 3 & \citet{USCensus1960}, Series R-46 (12\ct/25\ct) \\
-\texttt{ATL-1888-SEP} & 1888-09-01 & Submarine Cable (1w) & \texttt{T1} & \gbp 0.050 & $0.15$ & \gbp 79 / \gbp 12 & 4-Company Cartel Pact (30 Jul 1888) \\
+\texttt{ATL-1884-DEC} & 1884-12-24 & Submarine Cable (1w) & \texttt{T1} & \gbp 0.083 & $0.15$ & \gbp 134 / \gbp 22 & \citet{USCensus1960}, Series R-46 (40\ct) \\
+\texttt{ATL-1886-MAY} & 1886-05-06 & Submarine Cable (1w) & \texttt{T1} & \gbp 0.025\tnote{b} & $0.15$ & \gbp 36 / \gbp 3 & \citet{USCensus1960}, Series R-46 (12\ct/25\ct) \\
+\texttt{ATL-1888-SEP} & 1888-09-01 & Submarine Cable (1w) & \texttt{T1} & \gbp 0.050 & $0.15$ & \gbp 78 / \gbp 11 & 4-Company Cartel Pact (30 Jul 1888) \\
 \texttt{ATL-1956-SEP} & 1956-09-25 & Coaxial Cable (3m call) & \texttt{T1} & \gbp 3.000 & $0.10$ & --- & Postal Museum \texttt{POST 101/184} (\texttt{TAT-1}) \\
 \texttt{ATL-1965-APR} & 1965-04-06 & Geostationary Satellite & \texttt{T1} & \$12.00 & $0.27$ & --- & Intelsat I (\textit{Early Bird}) \\
 \texttt{ATL-1988-DEC} & 1988-12-14 & Fiber-Optic Cable (3m) & \texttt{T1} & \$3.000 & $0.05$ & --- & \texttt{TAT-8} ($280\,\text{Mbps}$) \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabularx}
 \begin{tablenotes}[flushleft]
 \scriptsize
 \item[a] \gbp 0.0333 ($8\,\text{d.}$ ship letter) vs.\ \gbp 0.0625 ($1\,\text{s.}\,3\,\text{d.}$ Falmouth--NY packet).
